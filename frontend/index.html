@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>FIR Records</h2>
+    <a href="/add">Add FIR</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Complainant</th>
+            <th>Category</th>
+            <th>Status</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
